@@ -72,6 +72,7 @@ $scripts->addFile('functions.js');
 $scripts->addFile('tbl_change.js');
 $scripts->addFile('jquery/jquery-ui-timepicker-addon.js');
 $scripts->addFile('gis_data_editor.js');
+$scripts->addFile('on_replace.js');
 
 /**
  * Displays the query submitted and its result
