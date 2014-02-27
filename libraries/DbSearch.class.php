@@ -350,14 +350,13 @@ class PMA_DbSearch
                 . __('Browse') . '</a></td>';
             $this_url_params['sql_query'] = $newsearchsqls['delete'];
             $delete_result_path = 'sql.php' . PMA_URL_getCommon($this_url_params);
-            $html_output .= '<td><a name="delete_search" href="'
-                . $delete_result_path . '" onclick="deleteResult(\''
-                . $delete_result_path . '\' , \''
+            $html_output .= '<td><a name="delete_search" class="ajax" href="'
+                . $delete_result_path . '" onclick="return confirm(\''
                 . sprintf(
                     __('Delete the matches for the %s table?'),
                     htmlspecialchars($each_table)
                 )
-                . '\');return false;">'
+                . '\');">'
                 . __('Delete') . '</a></td>';
         } else {
             $html_output .= '<td>&nbsp;</td>'
